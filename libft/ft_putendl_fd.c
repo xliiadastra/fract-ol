@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fract-ol_utils.c                                   :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 23:25:13 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/09 23:25:36 by yichoi           ###   ########.fr       */
+/*   Created: 2021/12/05 19:38:02 by yichoi            #+#    #+#             */
+/*   Updated: 2021/12/09 17:15:39 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fract-ol.h"
+#include "libft.h"
 
-void	ft_error(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-	exit(1);
+	size_t	len;
+
+	if (!s || fd < 0)
+		return ;
+	len = ft_strlen(s);
+	write(fd, s, len);
+	write(fd, "\n", 1);
 }
