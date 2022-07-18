@@ -6,7 +6,7 @@
 #    By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 15:18:40 by yichoi            #+#    #+#              #
-#    Updated: 2022/07/18 21:31:57 by yichoi           ###   ########.fr        #
+#    Updated: 2022/07/18 22:47:38 by yichoi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,12 @@ RMFLAGS		= -f
 INCLUDES	= ./fractol.h 
 
 SRCS		=	fractol.c				\
+				fractol_utils.c			\
 				mandelbrot.c			\
 				julia.c					\
-				burning_ship.c
+				burning_ship.c			\
+				zoom.c					\
+				move_esc.c				
 
 SRCS_BN		=	fractol.c
 

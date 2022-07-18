@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 22:51:21 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/18 21:31:51 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/18 22:53:02 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 # include "./libft/libft.h"	// libft
 # include "mlx.h"			// miniLibx
 
-# define WIN_WIDTH	800
-# define WIN_HEIGHT	800
-# define MIX_X -2
-# define MIX_Y -2
+# define X_AXIS	800
+# define Y_AXIS	800
+# define MIN_X -2
+# define MIN_Y -2
 # define MAX_X 2
 # define MAX_Y 2
 # define ITERATION 130
@@ -40,7 +40,7 @@ typedef struct s_data
 	int		color;
 	int		julia_or_mandelbrot;
 	double	xmin;
-	double	xamx;
+	double	xmax;
 	double	ymin;
 	double	ymax;
 	double	jx;
@@ -59,12 +59,19 @@ typedef struct images
 }	t_img;
 
 void	tutorial(void);
+void	check_type(t_data *data);
 
 void	ft_error(void);
 
-void	creat_mandelbrot(void);
+int		creat_mandelbrot(void);
+void	mandelbrot(t_data *data);
+
 void	creat_julia(void);
+
 void	creat_ship(void);
 
+int		zoom(int keycode, int x, int y, t_data *data);
+int		move_esc(int keycode, t_data *data);
+void	color_or_esc(t_data *data, int keycode);
 
 #endif
