@@ -6,7 +6,7 @@
 #    By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 15:18:40 by yichoi            #+#    #+#              #
-#    Updated: 2022/07/15 20:05:10 by yichoi           ###   ########.fr        #
+#    Updated: 2022/07/18 21:31:57 by yichoi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,9 @@ RMFLAGS		= -f
 INCLUDES	= ./fractol.h 
 
 SRCS		=	fractol.c				\
-				fractol_tool.c			\
-				fractol_utils.c			\
-				mandelbrot.c
+				mandelbrot.c			\
+				julia.c					\
+				burning_ship.c
 
 SRCS_BN		=	fractol.c
 
@@ -49,7 +49,7 @@ all : $(NAME)
 
 $(NAME) : $(A_OBJS)
 	@make -C $(LIBFT) 
-	$(CC) $(CFLAGS) -o $@ $^ -lmlx -framework OpenGL -framework AppKit -L $(LIBFT) -lft
+	$(CC) $(CFLAGS) -o $@ $^ -O3 -lmlx -framework OpenGL -framework AppKit -L $(LIBFT) -lft
 
 .PHONY : clean
 clean :

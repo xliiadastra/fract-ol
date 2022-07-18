@@ -6,12 +6,13 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:42:13 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/15 19:42:56 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/18 21:29:35 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	creat_julia()
+void	creat_julia(void)
 {
+	return ;
 }

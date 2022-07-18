@@ -6,12 +6,13 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:43:18 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/15 19:43:41 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/18 21:29:29 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	creat_ship()
+void	creat_ship(void)
 {
+	return ;
 }
