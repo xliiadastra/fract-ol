@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 22:49:49 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 22:49:00 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 23:04:15 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,14 @@ int	choice(int keycode, t_img *t)
 	return (0);
 }
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
 	t_img	t;
 
+	if (argc != 2)
+		ft_error();
+	if (ft_strncmp(argv[1], "fractals", 9))
+		ft_error();
 	tutorial();
 	t.path = "./IMG/tutorial_fractol.xpm";
 	t.mlx = mlx_init();

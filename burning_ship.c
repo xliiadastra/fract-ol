@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:43:18 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 22:54:47 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 23:13:15 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	draw_burning_ship(double a, double b, t_data *data)
 	else
 	{
 		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y,
-				data->color + (0xe3e3e3 * i));
+			data->color + (0xe3e3e3 * i));
 	}
 }
 
@@ -73,7 +73,8 @@ void	creat_ship(void)
 	data.ymax = MAX_Y;
 	data.color = 0;
 	data.mlx_ptr = mlx_init();
-	data.win_ptr = mlx_new_window(data.mlx_ptr, X_AXIS, Y_AXIS, "Burning Ship_Set");
+	data.win_ptr = mlx_new_window(data.mlx_ptr, X_AXIS, Y_AXIS,
+			"Burning Ship_Set");
 	burning_ship(&data);
 	mlx_key_hook(data.win_ptr, move_esc, &data);
 	mlx_mouse_hook(data.win_ptr, zoom, &data);

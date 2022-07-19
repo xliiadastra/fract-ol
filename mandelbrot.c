@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 12:41:22 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 22:54:19 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 23:14:19 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void	draw_mandelbrot(double a, double b, t_data *data)
 		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y, 0xFFFFFF);
 	else
 	{
-		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y, 
-				data->color + (0xe3e3e3 * i));
+		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y,
+			data->color + (0xe3e3e3 * i));
 	}
 }
 
@@ -73,7 +73,8 @@ void	creat_mandelbrot(void)
 	data.ymax = MAX_Y;
 	data.color = 0;
 	data.mlx_ptr = mlx_init();
-	data.win_ptr = mlx_new_window(data.mlx_ptr, X_AXIS, Y_AXIS, "Mandelbrot_Set");
+	data.win_ptr = mlx_new_window(data.mlx_ptr, X_AXIS, Y_AXIS,
+			"Mandelbrot_Set");
 	mandelbrot(&data);
 	mlx_key_hook(data.win_ptr, move_esc, &data);
 	mlx_mouse_hook(data.win_ptr, zoom, &data);

@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:42:13 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 22:54:36 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 23:13:46 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	julia_set(double a, double b, t_data *data)
 		if ((x * x) + (y * y) > 4)
 		{
 			mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y,
-					data->color + (0xccf1ff * i));
+				data->color + (0xccf1ff * i));
 			return (0);
 		}
 		i++;
