@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:42:13 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 22:32:19 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:54:36 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	julia(t_data *data)
 	mlx_string_put(data->mlx_ptr, data->win_ptr, 700, 10, 0xFFFFFF, "yichoi");
 }
 
-int	creat_julia(void)
+void	creat_julia(void)
 {
 	t_data	data;
 
@@ -80,5 +80,4 @@ int	creat_julia(void)
 	mlx_key_hook(data.win_ptr, move_esc, &data);
 	mlx_mouse_hook(data.win_ptr, zoom, &data);
 	mlx_loop(data.mlx_ptr);
-	return (0);
 }

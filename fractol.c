@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 22:49:49 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/18 22:58:01 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:49:00 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	choice(int keycode, t_img *t)
 	return (0);
 }
 
-int	main()
+int	main(void)
 {
 	t_img	t;
 

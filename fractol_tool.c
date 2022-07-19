@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 23:25:13 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/15 20:04:03 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:48:37 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_error(void)
 {
 	printf("usage: \"./fractol [fractal]\"\nfractal :\n"
 			"--> Mandelbrot\n"
-			"--> Julia 'a' 'b'\n"
-			"--> Burning ship 'a' 'b'\n");
+			"--> Julia\n"
+			"--> Burning ship\n");
 	exit(1);
 }
 

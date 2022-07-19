@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:43:18 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 22:33:12 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:54:47 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,11 @@ void	burning_ship(t_data *data)
 		}
 		data->y++;
 	}
-//	mlx_string_put(data->mlx_ptr, data->win_ptr, 699, 9, 0xFFFFFF, "yichoi");
+	mlx_string_put(data->mlx_ptr, data->win_ptr, 699, 9, 0xFFFFFF, "yichoi");
 	mlx_string_put(data->mlx_ptr, data->win_ptr, 700, 10, 0x000000, "yichoi");
 }
 
-int	creat_ship(void)
+void	creat_ship(void)
 {
 	t_data	data;
 
@@ -78,5 +78,4 @@ int	creat_ship(void)
 	mlx_key_hook(data.win_ptr, move_esc, &data);
 	mlx_mouse_hook(data.win_ptr, zoom, &data);
 	mlx_loop(data.mlx_ptr);
-	return (0);
 }

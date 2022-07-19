@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 12:41:22 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 22:32:30 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:54:19 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	mandelbrot(t_data *data)
 	mlx_string_put(data->mlx_ptr, data->win_ptr, 700, 10, 0x000000, "yichoi");
 }
 
-int	creat_mandelbrot(void)
+void	creat_mandelbrot(void)
 {
 	t_data	data;
 
@@ -77,6 +77,5 @@ int	creat_mandelbrot(void)
 	mandelbrot(&data);
 	mlx_key_hook(data.win_ptr, move_esc, &data);
 	mlx_mouse_hook(data.win_ptr, zoom, &data);
-	mlx_loop(data.win_ptr);
-	return (0);
+	mlx_loop(data.mlx_ptr);
 }
