@@ -6,13 +6,13 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 12:41:22 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/18 22:56:59 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:32:30 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void	drew_mandelbrot(double a, double b, t_data *data)
+void	draw_mandelbrot(double a, double b, t_data *data)
 {
 	double	x;
 	double	y;
@@ -53,13 +53,13 @@ void	mandelbrot(t_data *data)
 		{
 			a = data->xmin + (data->x * (data->xmax - data->xmin) / 800);
 			b = data->ymax - (data->y * (data->xmax - data->xmin) / 800);
-			drew_mandelbrot(a, b, data);
+			draw_mandelbrot(a, b, data);
 			data->x++;
 		}
 		data->y++;
 	}
-	mlx_string_put(data->mlx_ptr, data->win_ptr, 699, 9, 0xFFFFFF, "By_yichoi");
-	mlx_string_put(data->mlx_ptr, data->win_ptr, 700, 10, 0x000000, "By_yichoi");
+	mlx_string_put(data->mlx_ptr, data->win_ptr, 699, 9, 0xFFFFFF, "yichoi");
+	mlx_string_put(data->mlx_ptr, data->win_ptr, 700, 10, 0x000000, "yichoi");
 }
 
 int	creat_mandelbrot(void)

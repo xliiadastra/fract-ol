@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 22:51:21 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/18 22:53:02 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:47:27 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,16 @@ void	ft_error(void);
 
 int		creat_mandelbrot(void);
 void	mandelbrot(t_data *data);
+void	draw_mandelbrot(double a, double b, t_data *data);
 
-void	creat_julia(void);
+int		creat_julia(void);
+void	julia(t_data *data);
+int		julia_set(double a, double b, t_data *data);
+void	julia_shape(t_data *data, int keycode);
 
-void	creat_ship(void);
+int		creat_ship(void);
+void	burning_ship(t_data *data);
+void	draw_burning_ship(double a, double b, t_data *data);
 
 int		zoom(int keycode, int x, int y, t_data *data);
 int		move_esc(int keycode, t_data *data);

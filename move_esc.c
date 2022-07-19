@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:34:04 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/18 22:52:56 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:35:50 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	move_esc(int keycode, t_data *data)
 	double	ax;
 	double	ay;
 
-//	if (keycode == 0 || keycode == 1 || keycode == 2 || keycode == 13)
-//		julia_shape(data, keycode);
+	if (keycode == 0 || keycode == 1 || keycode == 2 || keycode == 13)
+		julia_shape(data, keycode);
 	ax = (data->xmax - data->xmin) / X_AXIS;
 	ay = (data->ymax - data->ymin) / Y_AXIS;
 	if (keycode == 53 || keycode == 8)
