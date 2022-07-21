@@ -6,20 +6,20 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 22:51:21 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 22:55:01 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/21 19:31:08 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# include <unistd.h>		// write, read
-# include <fcntl.h>			// open, close
-# include <stdio.h>			// perror, printf
-# include <stdlib.h>		// exit, malloc, free
-# include <math.h>			// math
-# include "./libft/libft.h"	// libft
-# include "mlx.h"			// miniLibx
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <math.h>
+# include "./libft/libft.h"
+# include "mlx.h"
 
 # define X_AXIS	800
 # define Y_AXIS	800
@@ -59,6 +59,7 @@ typedef struct images
 }	t_img;
 
 void	tutorial(void);
+void	home(void);
 void	check_type(t_data *data);
 
 void	ft_error(void);

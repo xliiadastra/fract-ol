@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 22:49:49 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 23:04:15 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/21 19:33:16 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,10 @@ int	choice(int keycode, t_img *t)
 	return (0);
 }
 
-int	main(int argc, char *argv[])
+void	home(void)
 {
 	t_img	t;
 
-	if (argc != 2)
-		ft_error();
-	if (ft_strncmp(argv[1], "fractals", 9))
-		ft_error();
-	tutorial();
 	t.path = "./IMG/tutorial_fractol.xpm";
 	t.mlx = mlx_init();
 	t.image = mlx_xpm_file_to_image(t.mlx, t.path, &t.width, &t.height);
@@ -53,5 +48,33 @@ int	main(int argc, char *argv[])
 	mlx_put_image_to_window(t.mlx, t.win, t.image, 0, 0);
 	mlx_key_hook(t.win, choice, &t);
 	mlx_loop(t.mlx);
+}
+
+int	main(int argc, char *argv[])
+{
+	if (argc != 2)
+		ft_error();
+	if (!ft_strncmp(argv[1], "fractals", 9))
+	{
+		tutorial();
+		home();
+	}
+	else if (!ft_strncmp(argv[1], "Mandelbrot", 11))
+	{
+		tutorial();
+		creat_mandelbrot();
+	}
+	else if (!ft_strncmp(argv[1], "Julia", 6))
+	{
+		tutorial();
+		creat_julia();
+	}
+	else if (!ft_strncmp(argv[1], "Burning_ship", 13))
+	{
+		tutorial();
+		creat_ship();
+	}
+	else
+		ft_error();
 	return (0);
 }

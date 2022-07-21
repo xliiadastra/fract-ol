@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:24:51 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 23:09:01 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/21 19:17:52 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ void	julia_shape(t_data *data, int keycode)
 
 void	ft_error(void)
 {
-	printf("\nusage: \"./fractol fractals\"\n\n");
+	printf("\nusage: \n\"./fractol fractals\"\n"
+			"\"./fractol Mandelbrot\"\n"
+			"\"./fractol Julia\"\n"
+			"\"./fractol Burning_ship\"\n");
 	exit(1);
 }
