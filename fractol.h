@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 22:51:21 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/22 21:42:37 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/23 01:19:50 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@
 # define MAX_X 2
 # define MAX_Y 2
 # define ITERATION 130
-# define C_A 0.111
-# define C_B 0.296
 
 typedef struct s_data
 {

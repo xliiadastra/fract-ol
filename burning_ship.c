@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:43:18 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 23:13:15 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/23 03:31:07 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ void	draw_burning_ship(double a, double b, t_data *data)
 	while (i++ < ITERATION)
 	{
 		tmp = x;
-		x = x * x - y * y + a;
+		x = (x * x) - (y * y) + a;
 		y = fabs(2 * tmp * y) - b;
 		if ((x * x) + (y * y) > 4)
 			break ;
 	}
 	if (i == ITERATION + 1)
-		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y, 0xFFFFFF);
+		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y, 0x000000);
 	else
 	{
 		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y,

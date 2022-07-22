@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 12:41:22 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/22 18:59:51 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/23 03:32:11 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	draw_mandelbrot(double a, double b, t_data *data)
 	while (i++ < ITERATION)
 	{
 		tmp = x;
-		x = x * x - y * y + a;
+		x = (x * x) - (y * y) + a;
 		y = (2 * tmp * y) - b;
 		if ((x * x) + (y * y) > 4)
 			break ;
