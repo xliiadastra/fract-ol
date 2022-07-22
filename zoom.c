@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:11:00 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/18 22:48:17 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/22 21:42:27 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ int	zoom(int keycode, int x, int y, t_data *data)
 	}
 	if (keycode == 4)
 	{
-		data->xmin = (data->xmin - 0.2);
-		data->ymin = (data->ymin - 0.2);
-		data->xmax = (data->xmax + 0.2);
-		data->ymax = (data->ymax + 0.2);
+		data->xmin = (data->xmin - ((ax * (X_AXIS - x)) * 0.2));
+		data->ymin = (data->ymin - ((ay * y) * 0.2));
+		data->xmax = (data->xmax + ((ax * x) * 0.2));
+		data->ymax = (data->ymax + ((ay * (Y_AXIS - y)) * 0.2));
 	}
 	check_type(data);
 	return (0);

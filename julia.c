@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:42:13 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/19 23:13:46 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/22 21:21:05 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	julia_set(double a, double b, t_data *data)
 	while (i < ITERATION)
 	{
 		tmp = x;
-		x = ((x * x) - (y * y)) + C_A + data->jx;
-		y = (2 * tmp * y) + C_B + data->jy;
+		x = ((x * x) - (y * y)) + data->jx;
+		y = (2 * tmp * y) + data->jy;
 		if ((x * x) + (y * y) > 4)
 		{
 			mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y,

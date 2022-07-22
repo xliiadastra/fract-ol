@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 12:41:22 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/21 19:25:44 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/22 18:59:51 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	draw_mandelbrot(double a, double b, t_data *data)
 			break ;
 	}
 	if (i == ITERATION + 1)
-		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y, 0xFFFFFF);
+		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y, 0x000000);
 	else
 	{
 		mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->x, data->y,

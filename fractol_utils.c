@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:24:51 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/21 19:17:52 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/22 21:43:13 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,20 @@ void	check_type(t_data *data)
 void	julia_shape(t_data *data, int keycode)
 {
 	if (keycode == 0)
-		data->jx -= 0.1;
+		data->jx -= 0.05;
 	if (keycode == 1)
-		data->jy -= 0.1;
+		data->jy -= 0.05;
 	if (keycode == 2)
-		data->jx += 0.1;
+		data->jx += 0.05;
 	if (keycode == 13)
-		data->jy += 0.1;
+		data->jy += 0.05;
 }
 
 void	ft_error(void)
 {
 	printf("\nusage: \n\"./fractol fractals\"\n"
-			"\"./fractol Mandelbrot\"\n"
-			"\"./fractol Julia\"\n"
-			"\"./fractol Burning_ship\"\n");
+		"\"./fractol Mandelbrot\"\n"
+		"\"./fractol Julia\"\n"
+		"\"./fractol Burning_ship\"\n");
 	exit(1);
 }
